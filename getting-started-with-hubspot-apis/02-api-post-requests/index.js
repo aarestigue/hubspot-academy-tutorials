@@ -62,7 +62,11 @@ app.get('/update', async (req, res) => {
         console.error(err);
     }
 });
+/* Here is a simple description of all:
 
+POST is always for creating a resource ( does not matter if it was duplicated )
+PUT is for checking if resource exists then update, else create new resource
+PATCH is always for updating a resource */
 app.post('/update', async (req, res) => {
     const update = {
         properties: {
